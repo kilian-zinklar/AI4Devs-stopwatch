@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herramientas de Tiempo</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 flex flex-col items-center justify-center h-screen">
+
+  <div id="tool-selection" class="text-center">
+    <h1 class="text-2xl font-bold mb-4">Selecciona una herramienta</h1>
+    <button id="start-timer-btn" class="bg-blue-500 text-white px-4 py-2 rounded mb-2">
+      Cronómetro
+    </button>
+    <button id="countdown-btn" class="bg-blue-500 text-white px-4 py-2 rounded">
+      Cuenta atrás
+    </button>
+  </div>
+
+  <!-- Contenedor del Cronómetro -->
+  <div id="timer-container" class="hidden flex flex-col items-center mt-8">
+    <h2 class="text-xl font-bold" id="timer">00:00:00.000</h2>
+    <div class="mt-4">
+      <button id="start-btn" class="bg-green-500 text-white px-4 py-2 rounded">Iniciar</button>
+      <button id="pause-btn" class="bg-yellow-500 text-white px-4 py-2 rounded ml-2">Pausar</button>
+      <button id="reset-btn" class="bg-red-500 text-white px-4 py-2 rounded ml-2">Restablecer</button>
+    </div>
+    <button id="back-btn-timer" class="mt-4 text-blue-600 underline">Volver atrás</button>
+  </div>
+
+  <!-- Contenedor de la Cuenta Atrás -->
+  <div id="countdown-container" class="hidden flex flex-col items-center mt-8">
+    <h2 class="text-xl font-bold" id="countdown">00:00:00.000</h2>
+    <div class="mt-4 flex flex-wrap justify-center">
+      <!-- Teclado Numérico -->
+      <div id="num-pad" class="grid grid-cols-3 gap-2">
+        <!-- Los botones numéricos se agregarán aquí mediante JavaScript -->
+      </div>
+    </div>
+    <div class="mt-4">
+      <button id="countdown-start-btn" class="bg-green-500 text-white px-4 py-2 rounded">Iniciar</button>
+      <button id="countdown-pause-btn" class="bg-yellow-500 text-white px-4 py-2 rounded ml-2">Pausar</button>
+      <button id="countdown-reset-btn" class="bg-red-500 text-white px-4 py-2 rounded ml-2">Restablecer</button>
+      <button id="countdown-clear-btn" class="bg-gray-500 text-white px-4 py-2 rounded ml-2">Clear</button>
+    </div>
+    <button id="back-btn-countdown" class="mt-4 text-blue-600 underline">Volver atrás</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
