@@ -1,84 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cronómetro y Cuenta Regresiva</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f4f4f4;
-    }
-
-    .container {
-      text-align: center;
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h1, h2 {
-      margin-bottom: 20px;
-    }
-
-    .display {
-      font-size: 2em;
-      margin: 20px 0;
-      padding: 10px;
-      background-color: #f0f0f0;
-      border-radius: 5px;
-    }
-
-    input[type="number"] {
-      width: 50px;
-      padding: 10px;
-      margin: 10px;
-      font-size: 1.2em;
-      text-align: center;
-    }
-
-    button {
-      padding: 10px 20px;
-      margin: 10px;
-      font-size: 1em;
-      cursor: pointer;
-      border: none;
-      border-radius: 5px;
-      width: 140px; /* Tamaño fijo para simetría */
-    }
-
-    .start {
-      background-color: green;
-      color: white;
-    }
-
-    .clear, .restart {
-      background-color: red;
-      color: white;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timer and Countdown</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Cronómetro</h1>
-    <div class="display" id="stopwatchDisplay">00:00:00</div>
-    <button class="start" id="toggleStopwatch">Iniciar</button>
-    <button class="clear" id="clearButton">Reiniciar</button>
-
-    <h2>Cuenta Regresiva</h2>
-    <input type="number" id="minutesInput" placeholder="MM" min="0" max="59">
-    <input type="number" id="secondsInput" placeholder="SS" min="0" max="59">
-    <button class="start" id="toggleCountdown">Iniciar</button>
-    <button class="restart" id="restartCountdown">Reiniciar</button>
-    <div class="display" id="countdownDisplay">00:00:00</div>
-  </div>
-
-  <script src="script.js"></script>
+<h1>Timer and Countdown</h1>
+<script src="script.js"></script>
 </body>
 </html>

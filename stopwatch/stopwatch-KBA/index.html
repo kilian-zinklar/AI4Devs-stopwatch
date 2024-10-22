@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cronómetro y Cuenta Atrás</title>
+    <script defer src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="space-y-10">
+      <!-- Cronómetro -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-4">Cronómetro</h1>
+        <div
+          id="stopwatch-display"
+          class="text-6xl font-mono text-center bg-blue-100 rounded p-4 mb-4"
+        >
+          00:00:00<span id="stopwatch-ms" class="text-4xl">.000</span>
+        </div>
+        <div class="flex justify-center space-x-4">
+          <button
+            id="start-stopwatch"
+            class="bg-green-500 text-white px-6 py-2 rounded-md"
+          >
+            Iniciar
+          </button>
+          <button
+            id="reset-stopwatch"
+            class="bg-red-500 text-white px-6 py-2 rounded-md"
+          >
+            Reiniciar
+          </button>
+        </div>
+      </div>
+
+      <!-- Cuenta Atrás -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-4">Cuenta Atrás</h1>
+        <div
+          id="countdown-display"
+          class="text-6xl font-mono text-center bg-blue-100 rounded p-4 mb-4"
+        >
+          00:08:00<span id="countdown-ms" class="text-4xl">.000</span>
+        </div>
+        <div class="flex justify-center space-x-2 mb-4">
+          <button id="increase-hours" class="bg-gray-300 px-4 py-2 rounded">
+            + H
+          </button>
+          <button id="increase-minutes" class="bg-gray-300 px-4 py-2 rounded">
+            + M
+          </button>
+          <button id="increase-seconds" class="bg-gray-300 px-4 py-2 rounded">
+            + S
+          </button>
+          <button id="decrease-hours" class="bg-gray-300 px-4 py-2 rounded">
+            - H
+          </button>
+          <button id="decrease-minutes" class="bg-gray-300 px-4 py-2 rounded">
+            - M
+          </button>
+          <button id="decrease-seconds" class="bg-gray-300 px-4 py-2 rounded">
+            - S
+          </button>
+        </div>
+        <div class="flex justify-center space-x-4">
+          <button
+            id="start-countdown"
+            class="bg-green-500 text-white px-6 py-2 rounded-md"
+          >
+            Iniciar
+          </button>
+          <button
+            id="reset-countdown"
+            class="bg-red-500 text-white px-6 py-2 rounded-md"
+          >
+            Reiniciar
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

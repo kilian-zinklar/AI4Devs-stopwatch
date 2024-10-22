@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer & Stopwatch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div id="main-menu">
+            <div class="menu">
+                <div class="menu-item" onclick="showScreen('stopwatch-screen')">
+                    <h2>Stopwatch</h2>
+                    <div class="arrow-up"></div>
+                </div>
+                <div class="menu-item" onclick="showScreen('timer-screen')">
+                    <h2>Countdown</h2>
+                    <div class="arrow-down"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="stopwatch-screen" class="screen">
+            <h1>Stopwatch</h1>
+            <div class="display" id="stopwatch-display">
+                00:00:00<span class="milliseconds">000</span>
+            </div>
+            <div class="controls">
+                <div class="buttons-row">
+                    <button class="start" onclick="stopwatch.start()">Start</button>
+                    <button class="clear" onclick="stopwatch.clear()">Clear</button>
+                </div>
+                <button class="back" onclick="showScreen('main-menu')">
+                    <i class="fas fa-arrow-left"></i> Back to Menu
+                </button>
+            </div>
+        </div>
+
+        <div id="timer-screen" class="screen">
+            <h1>Countdown Timer</h1>
+            <div class="display" id="timer-display">
+                00:00:00<span class="milliseconds">000</span>
+            </div>
+            <div class="controls">
+                <div class="numpad" id="numpad">
+                    <button onclick="timer.inputNumber(1)">1</button>
+                    <button onclick="timer.inputNumber(2)">2</button>
+                    <button onclick="timer.inputNumber(3)">3</button>
+                    <button onclick="timer.inputNumber(4)">4</button>
+                    <button onclick="timer.inputNumber(5)">5</button>
+                    <button onclick="timer.inputNumber(6)">6</button>
+                    <button onclick="timer.inputNumber(7)">7</button>
+                    <button onclick="timer.inputNumber(8)">8</button>
+                    <button onclick="timer.inputNumber(9)">9</button>
+                    <button onclick="timer.inputNumber(0)">0</button>
+                </div>
+                <div class="buttons-row">
+                    <button class="set" onclick="timer.set()">Set</button>
+                    <button class="clear" onclick="timer.clear()">Clear</button>
+                </div>
+                <button class="back" onclick="showScreen('main-menu')">
+                    <i class="fas fa-arrow-left"></i> Back to Menu
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
